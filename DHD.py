@@ -125,7 +125,6 @@ def findNeighboursVNS(currentSolution, numberOfChanges): #changes 1/2/3 element 
 
     return allNeighboursVNS
 
-#TODO: Write your algorithm as a funciton. You can add input parameters if you want.
 def hillClimbing(currentSolution):
     FITNESS_CALCULATIONS_COUNTER = 0
     currentSolutionFitness = calculateFitness(currentSolution)
@@ -134,7 +133,6 @@ def hillClimbing(currentSolution):
     bestNeighbour = []
     bestNeighbourFitness = 0
 
-    #Every time that you calculate the fitness value of a solution/combination you have to add one to FITNESS_CALCULATIONS_COUNTER. Example
     while True:
         allNeighbours = findNeigbours(currentSolution)
         for neighbour in allNeighbours:
@@ -169,7 +167,6 @@ def VNS(currentSolution):
     bestNeighbourFitness = 0
     counter = 0
 
-    #Every time that you calculate the fitness value of a solution/combination you have to add one to FITNESS_CALCULATIONS_COUNTER. Example
     while True:
         allNeighboursVNS = findNeighboursVNS(currentSolution,counter)
         for neighbour in allNeighboursVNS:
